@@ -21,5 +21,5 @@ _ _ _
 ### 提交情况
 * 1.完成人脸检测（采用0pencv已经训练好的模型进行检测）
 
-  ![Image tex](BS/image/a.jpg)
+  ![Image text](BS/image/a.jpg)
   
