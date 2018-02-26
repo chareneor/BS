@@ -8,7 +8,6 @@
 _ _ _ 
 _ _ _
 
-<<<<<<< HEAD
 ### 具体思路：
 
 * 从一张照片中识别人脸
@@ -17,7 +16,7 @@ _ _ _
 
 *  __注意__ ：*当一张图片包含多个人脸时应当将每一张照片名作文文件夹名，在此文件夹中应该顺序将截出的人脸命名*
 _ _ _ 
-=======
+_ _ _ 
 
 ### 具体思路：
 
@@ -26,20 +25,16 @@ _ _ _
 * 将人脸截出并放缩至合适尺寸
 
 _ _ _
->>>>>>> 480cb0b9cd9594430c09e46f6a783121ffbbe4e8
 _ _ _
 
 ### 提交情况
 
 * 1.完成人脸检测（采用0pencv已经训练好的模型进行检测）
-<<<<<<< HEAD
   ![1](https://github.com/chareneor/BS/blob/master/image/a.jpg)
+_ _ _
+_ _ _
 
 * 2.完成人脸截取（未对多个人脸情况进行分析）
-  ![1](https://github.com/chareneor/BS/blob/master/image/face.jpg)
+  ![2](https://github.com/chareneor/BS/blob/master/image/face.jpg)
   
-=======
 
-  ![Image text](BS/image/a.jpg)
-  
->>>>>>> 480cb0b9cd9594430c09e46f6a783121ffbbe4e8
