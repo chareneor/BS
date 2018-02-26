@@ -18,14 +18,14 @@ imagepath = r'./image/test.jpg'
 
 # 读取图片
 
-image = cv2.imread(imagepath,0)
+image = cv2.imread(imagepath)
 
-
+'''
 #显示图片
 cv2.imshow("image",image)
 cv2.waitKey(0)
 #cv2.destroyAllWindows()
-
+'''
 
 gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 
@@ -44,12 +44,14 @@ faceRects  = face_cascade.detectMultiScale(
 )
 
 if len(faceRects) > 0:  # 大于0则检测到人脸  
-    for faceRect in faceRects:  # 单独框出每一张人脸  
+    for faceRect in faceRects:  # 单独截出每一张人脸  
         x, y, w, h = faceRect  
-        cv2.rectangle(image, (x, y), (x + w , y + h ), (0,255,0)) 
-  
-# 写入图像  
-cv2.imwrite('./image/a.jpg',image)  
+        faces = image[x-10 : x + w +20  , y -10 : y + h - 20]
+        #cv2.rectangle(image, (x, y), (x + w , y + h ), (0,255,0)) #框出人脸
+        cv2.imshow("face",faces)
+        cv2.waitKey(0)
+# 写入图像
+cv2.imwrite('./image/face.jpg',faces)  
 
 
 
