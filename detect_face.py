@@ -8,7 +8,7 @@ Created on Sat Feb 24 15:47:26 2018
 import cv2 
 import numpy as np
 
-# 获取训练好的人脸的参数数据，这里直接从GitHub上使用默认值
+# 获取训练好的人脸的参数数据
 
 face_cascade = cv2.CascadeClassifier(r'./data/haarcascade_frontalface_default.xml')
 
@@ -46,7 +46,9 @@ faceRects  = face_cascade.detectMultiScale(
 if len(faceRects) > 0:  # 大于0则检测到人脸  
     for faceRect in faceRects:  # 单独截出每一张人脸  
         x, y, w, h = faceRect  
-        faces = image[x-10 : x + w +20  , y -10 : y + h - 20]
+        faces = image[x-10 : x + w +20  , y -10 : y + h - 20]  #截取人脸
+        #进行放缩，统一成64*64
+        faces = cv2.resize(faces,(64,64),interpolation=cv2.INTER_CUBIC)
         #cv2.rectangle(image, (x, y), (x + w , y + h ), (0,255,0)) #框出人脸
         cv2.imshow("face",faces)
         cv2.waitKey(0)
